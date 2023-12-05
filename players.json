@@ -14,9 +14,10 @@
     {"name" : "فواز", "strength" : 5, "pose": "M"} ,
     {"name" : "السلم", "strength" : 2, "pose": "F"} ,
     {"name" : "عبدالله الذوادي ", "strength" : 2, "pose": "M"} ,
-     {"name" : "سعود الجار ", "strength" : 3, "pose": "D"} ,
+    {"name" : "سعود الجار ", "strength" : 3, "pose": "D"} ,
     {"name" : "العطاوي  ", "strength" : 3, "pose": "M"} ,
     {"name" : "خالد بوالفتح ", "strength" : 4, "pose": "M"} ,
-    {"name" : "عبدالرحمن أحمد ", "strength" : 4, "pose": "M"} ,
+    {"name" : "عبدالرحمن أحمد ", "strength" : 4, "pose": "M"}
+    , 
     {"name" : " محمد المحمود ", "strength" : 2, "pose": "D"} 
 ] 
