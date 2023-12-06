@@ -26,19 +26,19 @@
 		  	<input class="form-control bg-light text-dark" type="text" placeholder= "Please Search Here" ng-model="pp.search" width="80%"/>
 		  </div>
 		 
-      <table dir="rtl" width="80%" class="table table-hover table-striped">
+      <table dir="rtl" width="80%" class="table table-hover table-striped" style="text-align: right;">
         
-            <tr>
-                <th scope="col"> الاسم </th>
-                <th scope="col"> التقييم </th>
-                <th scope="col"> الحركية </th>
-                <th scope="col"> الموقع </th>
-                <th scope="col"> المجموع </th>
-                <th scope="col"> يلعب </th>
+            <tr style="text-align: center;">
+                <th style="text-align: center;"> الاسم </th>
+                <th style="text-align: center;"> التقييم </th>
+                <th style="text-align: center;"> الحركية </th>
+                <th style="text-align: center;"> الموقع </th>
+                <th style="text-align: center;"> المجموع </th>
+                <th style="text-align: center;"> يلعب </th>
             </tr>
         
     
-          <tr ng-repeat="x in pp.players | filter : pp.search">
+          <tr ng-repeat="x in pp.players | filter : pp.search" style="text-align: center;">
               <td>{{x.name}}</td>
               <td>{{x.strength}}</td>
               <td>{{x.movement}}</td>
@@ -77,7 +77,7 @@
             </li>
           </ol>
       <!--input type="button" class="btn btn-primary btn-lg btn-block" value="Ganerate Teams" ng-click="pp.ganerate()"/!-->
-      <input type="button" class="btn btn-info btn-lg btn-block" value="وزعّ" ng-click="pp.newGanerate()"/>
+      <input type="button" class="btn btn-info btn-lg btn-block" value="توزيع اللاعبين" ng-click="pp.newGanerate()"/>
       
       <div class="row">
         <div class="column">
