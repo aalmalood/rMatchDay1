@@ -18,7 +18,7 @@
     {"name" : "العطاوي  ", "strength" : 3, "pose": "M", "movement" : 3  } ,
     {"name" : "خالد بوالفتح ", "strength" : 4, "pose": "M", "movement" : 3  } ,
     {"name" : "عبدالرحمن أحمد ", "strength" : 4, "pose": "M", "movement" : 3  }, 
-    {"name" : " محمد المحمود ", "strength" : 2, "pose": "D", "movement" : 3  } 
+    {"name" : " محمد المحمود ", "strength" : 2, "pose": "D", "movement" : 3  },
     {"name" : " خليل", "strength" : 3, "pose": "M", "movement" : 3  }
     
     ]
