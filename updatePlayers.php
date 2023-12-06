@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-$json = $_GET['data'];
+$json = $_GET['players'];
 
 /* sanity check */
 if (json_decode($json) != null)

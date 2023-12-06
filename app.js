@@ -316,6 +316,19 @@
 				method: "GET",
 				url: ('./updatePlayers.php/?data='+  players)
 				});
+				$http({
+					method: 'POST',
+					url: 'https://aalmalood.github.io/rMatchDay1/updatePlayers.php/',
+					data: {
+						players: 'players'
+						
+					}
+				}).then(function successCallback(response) {
+					console.log(response);
+					//getData(response);
+				}, function errorCallback(response) {
+					console.log('error');
+				});
 		
 				return response;
 		  ;
