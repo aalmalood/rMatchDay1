@@ -40,13 +40,13 @@
 		pla.result = "";
 		pla.selecetedPose = [
 			{"name": "وسط",
-				"value": "M"
+				"c": "M"
 			},
 			{"name": "دفاع",
-				"value": "D"
+				"c": "D"
 			},
 			{"name": "هجوم",
-				"value": "F"
+				"c": "F"
 			},
 		]
 		pla.matchPlayer = [];
@@ -173,7 +173,7 @@
 			console.log("inside changePose " , player);
 			var idx = pla.players.indexOf(player);
 			console.log("player.pose :" , player.pose);
-			player.pose = pose;
+			pla.players[idx].pose = pose;
 			console.log("After player.pose :" , pose);
 			
 		  };

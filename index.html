@@ -42,12 +42,10 @@
           <tr ng-repeat="x in pp.players | filter : pp.search" style="text-align: center;">
               <td>{{x.name}}</td>
               <td>{{x.strength}}</td>
-              <td>{{x.movement}}</td>
+              <td>{{x.movement}} {{pp.selecetedPose.selected}}</td>
               <td>
-		            <!--select   ng-model="pp.selecetedPose" ng-change="pp.changePose(x,pp.selecetedPose)" >
-                  <option ng-repeat="s in pp.selecetedPose" ng-selected="x.pose == s.value" ng-model="x.pose"  >{{s.name}}</option>
-                </select!-->
-                {{x.pose}}
+		            
+                <div ng-repeat="s in pp.selecetedPose" ng-click="pp.changePose(x,s.c)"> <span ng-if="x.pose == s.c" style="color: Green; font-weight: bold;">* </span>{{s.name}} </div>
 	            </td>
               <td>{{(x.strength *3 + x.movement )/2}}</td>
               <td><input id="{{x.name}}" type="checkbox" value="{{x}}" ng-checked="selection.indexOf(x) > -1" ng-click="pp.toggleSelection(x)"></td>
