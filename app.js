@@ -285,13 +285,17 @@
 		}
 		pla.saveJSON = function saveJSON(){
 			var promise = PlayerListService.updatePlayers(pla.players);
-			if(promise != null) {
-		
-			pla.players = response.data;
-			pla.msg = "Post Data Submitted Successfully!";
-			location.reload();
-			//console.log(pla.players);
-			}
+			
+			promise.then(function (response) {
+				//console.log("inside promise");
+				pla.players = response.data;
+				pla.msg = "Post Data Submitted Successfully!";
+				location.reload();
+				//console.log(pla.players);
+				})
+				.catch(function (error) {
+					console.log("Something went terribly wrong.");
+				});
 		}
 		
 	  }
@@ -308,11 +312,12 @@
 		  return response;
 		};
 		service.updatePlayers = function(players){
-			this.http.get('/updatePlayers.php/?data='+  players).subscribe(
-				(response) => {    
-				  console.log("update" , response);
-				  },
-				  (error) => { console.log(error); });
+			var response = $http({
+				method: "GET",
+				url: ('./updatePlayers.php/?data='+  players)
+				});
+		
+				return response;
 		  ;
 		  /*$http.post('./updatePlayers.php', {data : JSON.stringify(players)}).then(function (response) {
 
