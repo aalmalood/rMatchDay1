@@ -27,7 +27,7 @@
 		  </div>
 		 
       <table dir="rtl" width="80%" class="table table-hover table-striped">
-        <thead class="thead-dark">
+        
             <tr>
                 <th scope="col"> الاسم </th>
                 <th scope="col"> التقييم </th>
@@ -36,19 +36,19 @@
                 <th scope="col"> المجموع </th>
                 <th scope="col"> يلعب </th>
             </tr>
-          </thead>
+        
     
           <tr ng-repeat="x in pp.players | filter : pp.search">
               <td>{{x.name}}</td>
               <td>{{x.strength}}</td>
               <td>{{x.movement}}</td>
               <td>
-		<select>
+		            <select>
                   <option ng-selected="x.pose =='M'">وسط</option>
                   <option ng-selected="x.pose =='D'">دفاع</option>
                   <option ng-selected="x.pose =='F'">هجوم</option>
                 </select>
-	      </td>
+	            </td>
               <td>{{(x.strength *3 + x.movement )/2}}</td>
               <td><input id="{{x.name}}" type="checkbox" value="{{x}}" ng-checked="selection.indexOf(x) > -1" ng-click="pp.toggleSelection(x)"></td>
           </tr>
