@@ -54,50 +54,7 @@
 		pla.blueTeam = [];
 		pla.blueTeamStrength ;
 		pla.redTeamStrength ;
-		/*pla.ganerate = function ganerate(){
-			//console.log("before shuffle " , pla.matchPlayer);
-			pla.matchPlayer = shuffle(pla.matchPlayer);
-			//console.log("after shuffle " , pla.matchPlayer);
-			var result = equalTeams(pla.matchPlayer);
-			
-		var midfielderPlayer = pla.matchPlayer.filter(o => o.pose=="M");
-		console.log("midfielderPlayer " , midfielderPlayer);
-		var defenderPlayer = pla.matchPlayer.filter(o => o.pose=="D");
-		console.log("defenderPlayer " , defenderPlayer);
-		pla.blueTeam = result.teams[0];
-		pla.redTeam = result.teams[1];
-		pla.blueTeamStrength = result.strengths[0];
-		pla.redTeamStrength = result.strengths[1];
-		if(pla.matchPlayer.length % 2 == 1){
-			var weekerTeam = 1 ;
-			if(pla.blueTeamStrength < pla.redTeamStrength){
-				weekerTeam = 0;
-			}
-			var leftedPlayer = pla.matchPlayer.slice();
-			for(var i = 0 ; i < pla.blueTeam.length ; i ++){
-				var player1 = pla.blueTeam[i];
-				var player2 = pla.redTeam[i];
-				var idx = leftedPlayer.indexOf(player1);
-				if (idx > -1) {
-					leftedPlayer.splice(idx, 1);
-				}
-				var idx = leftedPlayer.indexOf(player2);
-				if (idx > -1) {
-					leftedPlayer.splice(idx, 1);
-				}
-			}
-			if(leftedPlayer != null && leftedPlayer.length > 0){
-				if(weekerTeam == 0){
-					pla.blueTeam.push(leftedPlayer[0]);
-					pla.blueTeamStrength = pla.blueTeamStrength + leftedPlayer[0].strength;
-				}else{
-					pla.redTeam.push(leftedPlayer[0]);
-					pla.redTeamStrength = pla.redTeamStrength + leftedPlayer[0].strength;
-				}
-				
-			}
-		}
-		}*/
+		
 
 		pla.newGanerate = function newGanerate(){
 		pla.matchPlayer = shuffle(pla.matchPlayer);
@@ -173,10 +130,10 @@
 					}
 					if(weekerTeam == 0){
 						pla.blueTeam.push(leftedPlayer[i]);
-						pla.blueTeamStrength = pla.blueTeamStrength + leftedPlayer[i].strength;
+						pla.blueTeamStrength = pla.blueTeamStrength  + (((leftedPlayer[i].strength *3)+ leftedPlayer[i].movement)/2);
 					}else{
 						pla.redTeam.push(leftedPlayer[i]);
-						pla.redTeamStrength = pla.redTeamStrength + leftedPlayer[i].strength;
+						pla.redTeamStrength = pla.redTeamStrength + (((leftedPlayer[i].strength *3)+ leftedPlayer[i].movement)/2);
 					}
 				}
 				
@@ -203,13 +160,13 @@
 		  };
 		
 		function compareStrength(a, b) { // for sorting players and selections
-			return a.strength - b.strength ;
+			return (((a.strength * 3) + a.movement)/2) - (((b.strength *3) + b.movement)/2) ;
 		}
 		function teamStrength(players) {
-			return players.reduce(function(total, player) {return total + player.strength;}, 0);
+			return players.reduce(function(total, player) {return total + (((player.strength *3) + player.movement)/2);}, 0);
 		}
 		function selectionStrength(players, selection) {
-			return players.reduce(function(total, player, index) {return total + player.strength * selection[index];}, 0);
+			return players.reduce(function(total, player, index) {return total + (((player.strength *3) + player.movement)/2) * selection[index];}, 0);
 		}
 		function nextPermutation(selection) { // reverse-lexicographical next permutation of a bit array
 			var max = true, pos = selection.length, set = 1;

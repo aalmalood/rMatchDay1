@@ -31,7 +31,9 @@
             <tr>
                 <th scope="col"> Name </th>
                 <th scope="col"> Rate </th>
+                <th scope="col"> Movement </th>
                 <th scope="col"> Position </th>
+                <th scope="col"> total </th>
                 <th scope="col"> checked </th>
             </tr>
           </thead>
@@ -39,7 +41,9 @@
           <tr ng-repeat="x in pp.players | filter : pp.search">
               <td>{{x.name}}</td>
               <td>{{x.strength}}</td>
+              <td>{{x.movement}}</td>
               <td>{{x.pose}}</td>
+              <td>{{(x.strength *3 + x.movement )/2}}</td>
               <td><input id="{{x.name}}" type="checkbox" value="{{x}}" ng-checked="selection.indexOf(x) > -1" ng-click="pp.toggleSelection(x)"></td>
           </tr>
         </table>    
@@ -63,7 +67,7 @@
           <ol class="bg-info">
             <h3 align="center"  class="display-3">Match Players</h3>
             <li ng-repeat="y in pp.matchPlayer">
-              <td>{{y.name}}</td>
+              {{y.name}} {{y.pose}}
             </li>
           </ol>
       <!--input type="button" class="btn btn-primary btn-lg btn-block" value="Ganerate Teams" ng-click="pp.ganerate()"/!-->
@@ -75,7 +79,7 @@
               <ol  style="text-align: center; background-color: #d1d1d1;">
                 <h3 class="bg-default" align="center"  class="display-3">White Team</h3>
                 <li ng-repeat="y in pp.redTeam">
-                  {{y.name}}  {{y.pose}}
+                  {{y.name}}  
                 </li>
               </ol> 
             </div>
@@ -85,7 +89,7 @@
           <ol class="text-light bg-dark" style="text-align: center; background-color: #000; color: #FFF;">
             <h3 class="darken" align="center" class="display-3">Black Team</h3>
             <li ng-repeat="y in pp.blueTeam">
-              {{y.name}}  {{y.pose}}
+              {{y.name}}  
             </li>
           </ol>
          
