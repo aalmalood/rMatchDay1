@@ -71,29 +71,29 @@
             </tr>
           </table!-->    
           <ol class="bg-info">
-            <h3 align="center"  class="display-3">Match Players</h3>
+            <h3 align="center"  class="display-3">لاعبون المباراة</h3>
             <li ng-repeat="y in pp.matchPlayer">
               {{y.name}} {{y.pose}}
             </li>
           </ol>
       <!--input type="button" class="btn btn-primary btn-lg btn-block" value="Ganerate Teams" ng-click="pp.ganerate()"/!-->
-      <input type="button" class="btn btn-info btn-lg btn-block" value="Ganerate Teams by position" ng-click="pp.newGanerate()"/>
+      <input type="button" class="btn btn-info btn-lg btn-block" value="وزعّ" ng-click="pp.newGanerate()"/>
       
       <div class="row">
         <div class="column">
-          <h4 ng-if="pp.redTeam.length > 0">Team Strgenth = {{pp.redTeamStrength}}</h4>
+          <h4 ng-if="pp.redTeam.length > 0">قوة الفريق = {{pp.redTeamStrength}}</h4>
               <ol  style="text-align: center; background-color: #d1d1d1;">
-                <h3 class="bg-default" align="center"  class="display-3">White Team</h3>
+                <h3 class="bg-default" align="center"  class="display-3">الفريق الأبيض</h3>
                 <li ng-repeat="y in pp.redTeam">
                   {{y.name}}  
                 </li>
               </ol> 
             </div>
         <div class="column">
-          <h4 ng-if="pp.blueTeam.length > 0">Team Strgenth = {{pp.blueTeamStrength}}</h4>
+          <h4 ng-if="pp.blueTeam.length > 0">قوة الفريق = {{pp.blueTeamStrength}}</h4>
           
           <ol class="text-light bg-dark" style="text-align: center; background-color: #000; color: #FFF;">
-            <h3 class="darken" align="center" class="display-3">Black Team</h3>
+            <h3 class="darken" align="center" class="display-3">الفريق الأسود</h3>
             <li ng-repeat="y in pp.blueTeam">
               {{y.name}}  
             </li>
