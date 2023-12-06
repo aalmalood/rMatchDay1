@@ -1,26 +1,24 @@
 [ 
-    {"name" : "عبدالرحمن الجابري", "strength" : 2, "pose": "D"} ,
-    {"name" : "حامد", "strength" : 3, "pose": "D"} ,
-    {"name" : "سعد", "strength" : 3, "pose": "M"} ,
-    {"name" : "ناصر", "strength" : 5, "pose": "M"} ,
-    {"name" : "الحارث", "strength" : 3, "pose": "D"} ,
-    {"name" : "خليفة", "strength" : 4, "pose": "M"} ,
-    {"name" : "عبدالله وحيد", "strength" : 1, "pose": "F"} ,
-    {"name" : "حسن الشروقي", "strength" : 3, "pose": "D"} ,
-    {"name" : "الشروقي", "strength" : 2, "pose": "D"} ,
-    {"name" : "المران", "strength" : 3, "pose": "M"} ,
-    {"name" : "صباح", "strength" : 2, "pose": "M"} ,
-    {"name" : "خالد", "strength" : 4, "pose": "M"} ,
-    {"name" : "فواز", "strength" : 5, "pose": "M"} ,
-    {"name" : "السلم", "strength" : 2, "pose": "F"} ,
-    {"name" : "عبدالله الذوادي ", "strength" : 2, "pose": "M"} ,
-    {"name" : "سعود الجار ", "strength" : 3, "pose": "D"} ,
-    {"name" : "العطاوي  ", "strength" : 3, "pose": "M"} ,
-    {"name" : "خالد بوالفتح ", "strength" : 4, "pose": "M"} ,
-    {"name" : "عبدالرحمن أحمد ", "strength" : 4, "pose": "M"}
-    , 
-    {"name" : " محمد المحمود ", "strength" : 2, "pose": "D"} 
-     {"name" : " خليل", "strength" : 3, "pose": "M"}
+    {"name" : "عبدالرحمن الجابري", "strength" : 2, "pose": "D", "movement" : 3  } ,
+    {"name" : "حامد", "strength" : 3, "pose": "D", "movement" : 3  } ,
+    {"name" : "سعد", "strength" : 3, "pose": "M", "movement" : 3  } ,
+    {"name" : "ناصر", "strength" : 5, "pose": "M", "movement" : 3  } ,
+    {"name" : "الحارث", "strength" : 3, "pose": "D", "movement" : 3  } ,
+    {"name" : "خليفة", "strength" : 4, "pose": "M", "movement" : 3  } ,
+    {"name" : "عبدالله وحيد", "strength" : 1, "pose": "F", "movement" : 3  } ,
+    {"name" : "حسن الشروقي", "strength" : 3, "pose": "D", "movement" : 3  } ,
+    {"name" : "الشروقي", "strength" : 2, "pose": "D", "movement" : 3  } ,
+    {"name" : "المران", "strength" : 3, "pose": "M", "movement" : 3  } ,
+    {"name" : "صباح", "strength" : 2, "pose": "M", "movement" : 3  } ,
+    {"name" : "خالد", "strength" : 4, "pose": "M", "movement" : 3  } ,
+    {"name" : "فواز", "strength" : 5, "pose": "M", "movement" : 3  } ,
+    {"name" : "السلم", "strength" : 2, "pose": "F", "movement" : 3  } ,
+    {"name" : "عبدالله الذوادي ", "strength" : 2, "pose": "M", "movement" : 3  } ,
+    {"name" : "سعود الجار ", "strength" : 3, "pose": "D", "movement" : 3  } ,
+    {"name" : "العطاوي  ", "strength" : 3, "pose": "M", "movement" : 3  } ,
+    {"name" : "خالد بوالفتح ", "strength" : 4, "pose": "M", "movement" : 3  } ,
+    {"name" : "عبدالرحمن أحمد ", "strength" : 4, "pose": "M", "movement" : 3  }, 
+    {"name" : " محمد المحمود ", "strength" : 2, "pose": "D", "movement" : 3  } 
+    {"name" : " خليل", "strength" : 3, "pose": "M", "movement" : 3  }
     
     ]
-    
