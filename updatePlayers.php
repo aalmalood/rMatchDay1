@@ -2,7 +2,7 @@
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
 
-$json = $_POST['data'];
+$json = $_GET['data'];
 
 /* sanity check */
 if (json_decode($json) != null)

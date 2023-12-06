@@ -308,13 +308,13 @@
 		  return response;
 		};
 		service.updatePlayers = function(players){
-			/*this.http.post('/updatePlayers.php/?players='+  players).subscribe(
+			this.http.post('/updatePlayers.php/?players='+  players).subscribe(
 				(response) => {    
 				  console.log("update" , response);
 				  },
 				  (error) => { console.log(error); });
-		  ;*/
-		  $http.post('./updatePlayers.php', {data : JSON.stringify(players)}).then(function (response) {
+		  ;
+		  /*$http.post('./updatePlayers.php', {data : JSON.stringify(players)}).then(function (response) {
 
 			if (response.data)
 			
@@ -330,7 +330,7 @@
 			
 			console.log( response.headers());
 			
-			});
+			});*/
 		};}
     
  })();
