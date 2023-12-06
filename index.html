@@ -44,9 +44,9 @@
               <td>{{x.movement}}</td>
               <td>
 		<select ng-model="x.pose" >
-                  <option ng-select="x.pose =='M'">وسط</option>
-                  <option ng-select="x.pose =='D'">دفاع</option>
-                  <option ng-select="x.pose =='F'">هجوم</option>
+                  <option ng-selected="x.pose =='M'">وسط</option>
+                  <option ng-selected="x.pose =='D'">دفاع</option>
+                  <option ng-selected="x.pose =='F'">هجوم</option>
                 </select>
 	      </td>
               <td>{{(x.strength *3 + x.movement )/2}}</td>
