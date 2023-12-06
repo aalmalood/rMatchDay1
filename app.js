@@ -158,6 +158,14 @@
 			   pla.matchPlayer.push(player);
 			 }
 		  };
+	  pla.changePose = function changePose(player,pose) {
+			console.log("inside changePose " , player);
+			var idx = pla.players.indexOf(player);
+			console.log("player.pose :" , player.pose);
+			player.pose = pose;
+			console.log("After player.pose :" , player.pose);
+			
+		  };
 		
 		function compareStrength(a, b) { // for sorting players and selections
 			return (((a.strength * 3) + a.movement)/2) - (((b.strength *3) + b.movement)/2) ;
