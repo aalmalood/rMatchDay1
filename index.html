@@ -42,7 +42,13 @@
               <td>{{x.name}}</td>
               <td>{{x.strength}}</td>
               <td>{{x.movement}}</td>
-              <td>{{x.pose}}</td>
+              <td>
+		<select ng-model="x.pose" >
+                  <option ng-select="x.pose =='M'">وسط</option>
+                  <option ng-select="x.pose =='D'">دفاع</option>
+                  <option ng-select="x.pose =='F'">هجوم</option>
+                </select>
+	      </td>
               <td>{{(x.strength *3 + x.movement )/2}}</td>
               <td><input id="{{x.name}}" type="checkbox" value="{{x}}" ng-checked="selection.indexOf(x) > -1" ng-click="pp.toggleSelection(x)"></td>
           </tr>
