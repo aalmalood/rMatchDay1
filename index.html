@@ -44,11 +44,10 @@
               <td>{{x.strength}}</td>
               <td>{{x.movement}}</td>
               <td>
-		            <select ng-model="selecetedPose" ng-change="pp.changePose(x,selecetedPose)" >
-                  <option ng-selected="x.pose == 'M'" ng-option value="M"  >وسط</option>
-                  <option ng-selected="x.pose =='D'" ng-option value="D" >دفاع</option>
-                  <option ng-selected="x.pose =='F'" ng-option value="F" >هجوم</option>
-                </select>
+		            <!--select   ng-model="pp.selecetedPose" ng-change="pp.changePose(x,pp.selecetedPose)" >
+                  <option ng-repeat="s in pp.selecetedPose" ng-selected="x.pose == s.value" ng-model="x.pose"  >{{s.name}}</option>
+                </select!-->
+                {{x.pose}}
 	            </td>
               <td>{{(x.strength *3 + x.movement )/2}}</td>
               <td><input id="{{x.name}}" type="checkbox" value="{{x}}" ng-checked="selection.indexOf(x) > -1" ng-click="pp.toggleSelection(x)"></td>

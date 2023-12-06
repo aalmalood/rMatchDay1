@@ -38,6 +38,17 @@
 		var pla = this;
 		pla.search = "";
 		pla.result = "";
+		pla.selecetedPose = [
+			{"name": "وسط",
+				"value": "M"
+			},
+			{"name": "دفاع",
+				"value": "D"
+			},
+			{"name": "هجوم",
+				"value": "F"
+			},
+		]
 		pla.matchPlayer = [];
 		if(pla.players == null){
 			var promise = PlayerListService.getPlayerList();
@@ -163,7 +174,7 @@
 			var idx = pla.players.indexOf(player);
 			console.log("player.pose :" , player.pose);
 			player.pose = pose;
-			console.log("After player.pose :" , player.pose);
+			console.log("After player.pose :" , pose);
 			
 		  };
 		
