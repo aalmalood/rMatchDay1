@@ -285,16 +285,13 @@
 		}
 		pla.saveJSON = function saveJSON(){
 			var promise = PlayerListService.updatePlayers(pla.players);
-			promise.then(function (response) {
+			if(promise != null) {
 		
 			pla.players = response.data;
 			pla.msg = "Post Data Submitted Successfully!";
 			location.reload();
 			//console.log(pla.players);
-			})
-			.catch(function (error) {
-				pla.msg ="Something went terribly wrong.";
-			});
+			}
 		}
 		
 	  }
