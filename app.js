@@ -321,17 +321,17 @@
 
 			if (response.data)
 			
-			$scope.msg = "Post Data Submitted Successfully!";
+			console.log("Post Data Submitted Successfully!");
 			
 			}, function (response) {
 			
-			$scope.msg = "Service not Exists";
+			console.log("message Service not Exists");
 			
-			$scope.statusval = response.status;
+			console.log(response.status);
 			
-			$scope.statustext = response.statusText;
+			console.log(response.statusText);
 			
-			$scope.headers = response.headers();
+			console.log( response.headers());
 			
 			});
 		};}
