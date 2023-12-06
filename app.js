@@ -283,7 +283,19 @@
 			swapPlayers(wTeam, sTeam, wBestSel, sBestSel);
 			return {teams: [wTeam, sTeam], strengths: [teamStrength(wTeam), teamStrength(sTeam)]};
 		}
+		pla.saveJSON = function saveJSON(){
+			var promise = PlayerListService.updatePlayers(pla.players);
+			promise.then(function (response) {
 		
+			pla.players = response.data;
+			pla.msg = "Post Data Submitted Successfully!";
+			location.reload();
+			//console.log(pla.players);
+			})
+			.catch(function (error) {
+				pla.msg ="Something went terribly wrong.";
+			});
+		}
 		
 	  }
 
@@ -291,14 +303,37 @@
 	  function PlayerListService($http, ApiBasePath1) {
 	  var service = this;
 	  service.getPlayerList = function () {
-		//console.log("inside getPlayerList");
-		//console.log("ApiBasePath " , ApiBasePath1);
 		  var response = $http({
 		  method: "GET",
 		  url: (ApiBasePath1)
 		  });
   
 		  return response;
+		};
+		service.updatePlayers = function(players){
+			/*this.http.post('/updatePlayers.php/?players='+  players).subscribe(
+				(response) => {    
+				  console.log("update" , response);
+				  },
+				  (error) => { console.log(error); });
+		  ;*/
+		  $http.post('./updatePlayers.php', {data : JSON.stringify(players)}).then(function (response) {
+
+			if (response.data)
+			
+			$scope.msg = "Post Data Submitted Successfully!";
+			
+			}, function (response) {
+			
+			$scope.msg = "Service not Exists";
+			
+			$scope.statusval = response.status;
+			
+			$scope.statustext = response.statusText;
+			
+			$scope.headers = response.headers();
+			
+			});
 		};}
     
  })();

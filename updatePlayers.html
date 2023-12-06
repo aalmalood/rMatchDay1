@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html  lang="en">
+  <head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+   
+    <script src="app.js"></script>
+    
+    <title>Red Panda MatchDay</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script><link rel="icon" type="image/x-icon" href="favicon.ico">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./src/css/style.css">
+</head>
+  <body ng-app='RedPandasPlayers'>
+	
+    <div class="container" ng-controller='PlayerController as pp'  >
+		
+		<br/>
+    <h3 align="center"  class="display-3">All Players</h3>
+    <h4>{{pp.msg}}</h4>
+      <br/>
+		<div class="input-group">
+		  <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+		  	<input class="form-control bg-light text-dark" type="text" placeholder= "Please Search Here" ng-model="pp.search" width="80%"/>
+		  </div>
+		 
+      <table width="80%" class="table table-hover table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col"> Name </th>
+                <th scope="col"> rate </th>
+                <th scope="col"> movement </th>
+                <th scope="col"> total </th>
+            </tr>
+          </thead>
+    
+          <tr ng-repeat="x in pp.players | filter : pp.search">
+              <td>{{x.name}}</td>
+              <td class="col-xs-2"> 
+                <input type="text" class="form-control" ng-model="x.strength"/>
+              </td>
+              <td class="col-xs-2"> <input type="text" class="form-control" ng-model="x.movement"/></td>
+              <td>{{(x.strength *3 + x.movement*1 )/2}}</td>
+          </tr>
+        </table>    
+
+      <input type="button" class="btn btn-primary btn-lg btn-block" value="Update" ng-click="pp.saveJSON()"/>
+      
+        
+    </div>
+  </div>
+
+  
+  </body>
+</html>
