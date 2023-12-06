@@ -308,7 +308,7 @@
 		  return response;
 		};
 		service.updatePlayers = function(players){
-			this.http.get('/updatePlayers.php/?players='+  players).subscribe(
+			this.http.get('/updatePlayers.php/?data='+  players).subscribe(
 				(response) => {    
 				  console.log("update" , response);
 				  },
