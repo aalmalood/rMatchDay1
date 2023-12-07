@@ -320,12 +320,12 @@
 						h: 'players'
 						
 					}
-				}).then(function successCallback(response) {
+				}).success(function successCallback(response) {
 					console.log(response);
 					//getData(response);
-				}, function errorCallback(response) {
+				}.error(function errorCallback(response) {
 					console.log('error');
-				});
+				}));
 		
 				//return response;
 		  
