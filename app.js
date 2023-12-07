@@ -313,10 +313,6 @@
 		};
 		service.updatePlayers = function(players){
 			var h = "ABCDEFG"
-			var response = $http({
-				method: "GET",
-				url: ('./updatePlayers.php/?data='+  players)
-				});
 				$http({
 					method: 'POST',
 					url: 'https://aalmalood.github.io/rMatchDay1/updatePlayers.php/',
@@ -331,8 +327,8 @@
 					console.log('error');
 				});
 		
-				return response;
-		  ;
+				//return response;
+		  
 		  /*$http.post('./updatePlayers.php', {data : JSON.stringify(players)}).then(function (response) {
 
 			if (response.data)
