@@ -294,7 +294,7 @@
 				//console.log(pla.players);
 				})
 				.catch(function (error) {
-					console.log("Something went terribly wrong.");
+					console.log("Something went terribly wrong." , error);
 				});
 		}
 		
