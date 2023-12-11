@@ -4,7 +4,7 @@
     {"name" : "سعد", "strength" : 3, "pose": "M", "movement" : 3  } ,
     {"name" : "ناصر", "strength" : 5, "pose": "M", "movement" : 4 } ,
     {"name" : "الحارث", "strength" : 3, "pose": "D", "movement" : 3  } ,
-    {"name" : "خليفة", "strength" : 4, "pose": "M", "movement" : 3  } ,
+    {"name" : "خليفة", "strength" : 3, "pose": "M", "movement" : 3  } ,
     {"name" : "عبدالله وحيد", "strength" : 1, "pose": "F", "movement" : 1  } ,
     {"name" : "حسن الشروقي", "strength" : 3, "pose": "D", "movement" : 3  } ,
     {"name" : "الشروقي", "strength" : 2, "pose": "D", "movement" : 3  } ,
